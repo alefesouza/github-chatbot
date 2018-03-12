@@ -1,0 +1,24 @@
+{
+  "hello":
+    "Olá! Eu sou um bot para pegar informações do GitHub, caso tenha dificuldades, digite 'ajuda'.",
+  "sorry":
+    "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
+
+  "stars_response": "O repositório %s possui %d estrelas.",
+  "stars_error":
+    "Por favor, digite um repositório no formato usuário/repositório.",
+
+  "repository_info_response":
+    "O repositório %s possui %d estrelas, %d usuários assistindo e %d forks, também há %d commits e %d contribuidores.",
+  "repository_info_welcome":
+    "Bem-vindo a busca de informações de repositórios do GitHub! Estamos analisando sua mensagem: '%s'.",
+  "repository_info_error":
+    "Por favor, digite um repositório no formato usuário/repositório.",
+
+  "user_info_response":
+    "O usuário %s se chama %s, segue %d usuários, possui %d seguidores e %d repositórios.",
+  "user_info_error": "Por valor, digite um usuário válido.",
+
+  "trending_info": "Lista dos principais repositórios: %s.",
+  "trending_error": "Ocorreu um erro"
+}

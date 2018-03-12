@@ -1,0 +1,21 @@
+{
+  "name": "github-bot-backend",
+  "version": "1.0.0",
+  "description": "Back-end for the GitHub Bot.",
+  "main": "index.js",
+  "repository": "https://github.com/alefesouza/github-bot.git",
+  "author": "Alefe Souza <contact@alefesouza.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc"
+  },
+  "keywords": ["bot", "bot builder", "github"],
+  "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.11.1",
+    "ts-node": "^5.0.1",
+    "typescript": "^2.7.2"
+  }
+}

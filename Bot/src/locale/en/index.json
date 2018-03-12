@@ -1,0 +1,23 @@
+{
+  "hello":
+    "Hello! I'm a bot to get GitHub information, type 'help' to get some assistance.",
+  "sorry":
+    "Sorry, I did not understand '%s'. Type 'help' if you need assistance.",
+
+  "stars_response": "The repository %s has %d stars.",
+  "stars_error": "Please provide a repository in the format user/repository.",
+
+  "repository_info_response":
+    "The repository %s has %d stars, %d users watching and %d forks, it also has %d commits and %d contributors.",
+  "repository_info_welcome":
+    "Welcome to the Repository Infomation finder! We are analyzing your message: '%s'.",
+  "repository_info_error":
+    "Please provide a repository in the format user/repository.",
+
+  "user_info_response":
+    "The user %s is named %s, follow %d users, has %d followers and %d repositories.",
+  "user_info_error": "Please provide a valid user.",
+
+  "trending": "Trending repository list: %s.",
+  "trending_error": "An error occurred."
+}
