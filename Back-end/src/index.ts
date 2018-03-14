@@ -1,9 +1,29 @@
 import express from 'express';
+import Crawler from 'crawler';
+
+import githubCrawler from './github-crawler';
+
+const c = new Crawler({
+  maxConnections: 10,
+});
 
 const app = express();
 
 app.get('/', (req, res) => {
-  res.send('Hello World!');
+  let uri = 'https://github.com/trending/';
+
+  const language = req.query.language;
+
+  if (language) {
+    uri += language;
+  }
+
+  c.queue([
+    {
+      uri,
+      callback: githubCrawler(res),
+    },
+  ]);
 });
 
 app.listen(3000, () => {
