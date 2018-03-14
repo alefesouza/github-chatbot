@@ -7,12 +7,14 @@
   "author": "Alefe Souza <contact@alefesouza.com>",
   "license": "MIT",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "start": "ts-node src/app.ts"
   },
   "keywords": ["bot", "bot builder", "github"],
   "dependencies": {
     "botbuilder": "^3.14.0",
     "dotenv": "^5.0.1",
+    "node-fetch": "^2.1.1",
     "restify": "^6.3.4"
   },
   "devDependencies": {

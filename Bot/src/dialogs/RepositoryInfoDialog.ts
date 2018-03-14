@@ -1,17 +1,24 @@
 import * as builder from 'botbuilder';
+import fetch from 'node-fetch';
 
 const RepositoryInfo: builder.IDialogWaterfallStep = (session, args, next) => {
-  session.send('repository_info_welcome', session.message.text);
+  const userEntity = builder.EntityRecognizer.findEntity(
+    args.intent.entities,
+    'user',
+  );
 
   const repositoryEntity = builder.EntityRecognizer.findEntity(
     args.intent.entities,
     'repository',
   );
 
-  if (repositoryEntity) {
-    session.dialogData.searchType = 'repository';
-
-    next({ response: repositoryEntity.entity });
+  if (userEntity && repositoryEntity) {
+    next({
+      response: {
+        user: userEntity.entity,
+        repository: repositoryEntity.entity,
+      },
+    });
   } else {
     builder.Prompts.text(
       session,
@@ -20,11 +27,42 @@ const RepositoryInfo: builder.IDialogWaterfallStep = (session, args, next) => {
   }
 };
 
-const RepositoryInfoResult: builder.IDialogWaterfallStep = (
+const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
   session,
   results,
 ) => {
-  const repository = results.response;
+  const { user, repository } = results.response;
+
+  const repoInfo = await fetch(
+    `https://api.github.com/repos/${user}/${repository}`,
+  );
+  const json = await repoInfo.json();
+
+  const buttons = [
+    builder.CardAction.openUrl(session, json.html_url, 'GitHub'),
+  ];
+
+  if (json.homepage) {
+    buttons.push(builder.CardAction.openUrl(session, json.homepage, 'Site'));
+  }
+
+  const card = new builder.ThumbnailCard(session)
+    .title(`${user}/${repository}`)
+    .subtitle(json.description)
+    .text(
+      session.gettext(
+        'repository_info_response',
+        `${user}/${repository}`,
+        json.language,
+        json.stargazers_count,
+        json.forks_count,
+        json.subscribers_count,
+      ),
+    )
+    .buttons(buttons);
+
+  var msg = new builder.Message(session).addAttachment(card);
+  session.send(msg);
 
   session.endDialog();
 };

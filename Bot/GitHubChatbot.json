@@ -1,0 +1,329 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "GitHubChatbot",
+  "desc": "",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "RepositoryInfo"
+    },
+    {
+      "name": "Stars"
+    },
+    {
+      "name": "Trending"
+    },
+    {
+      "name": "UserInfo"
+    }
+  ],
+  "entities": [
+    {
+      "name": "repository"
+    },
+    {
+      "name": "user"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": ["datetimeV2"],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "good day",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "good night",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "how about the alefesouza/laravel-vue-boilerplate repository",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 14,
+          "endPos": 23
+        },
+        {
+          "entity": "repository",
+          "startPos": 25,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "how are you",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "how is the laravel/laravel repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 11,
+          "endPos": 17
+        },
+        {
+          "entity": "repository",
+          "startPos": 19,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "how is the profile of haskellcamargo",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "how is the trendings right now",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "how many stars have the repository vuejs/vue",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 35,
+          "endPos": 39
+        },
+        {
+          "entity": "repository",
+          "startPos": 41,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "how many stars have the vuejs/vue repository",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 28
+        },
+        {
+          "entity": "repository",
+          "startPos": 30,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "i want to know about the alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 25,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "i want to know about the rails/rails",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 25,
+          "endPos": 29
+        },
+        {
+          "entity": "repository",
+          "startPos": 31,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "i would like to know about the microsoft/vscode repository",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 31,
+          "endPos": 39
+        },
+        {
+          "entity": "repository",
+          "startPos": 41,
+          "endPos": 46
+        }
+      ]
+    },
+    {
+      "text": "i would like to know the stars number of laravel/laravel",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 41,
+          "endPos": 47
+        },
+        {
+          "entity": "repository",
+          "startPos": 49,
+          "endPos": 55
+        }
+      ]
+    },
+    {
+      "text": "show me how is the user mpj",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "show me information about the angular/angular repository",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 30,
+          "endPos": 36
+        },
+        {
+          "entity": "repository",
+          "startPos": 38,
+          "endPos": 44
+        }
+      ]
+    },
+    {
+      "text": "show me information about the user vedovelli",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 35,
+          "endPos": 43
+        }
+      ]
+    },
+    {
+      "text": "show me the number of stars of alefesouza/descicloapp-chrome",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 31,
+          "endPos": 40
+        },
+        {
+          "entity": "repository",
+          "startPos": 42,
+          "endPos": 59
+        }
+      ]
+    },
+    {
+      "text": "show me the trending repositories",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "show me the trendings",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "show me torvalds profile",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "stars of facebook/react",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 9,
+          "endPos": 16
+        },
+        {
+          "entity": "repository",
+          "startPos": 18,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "tell me about the vuejs/vue repository",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 18,
+          "endPos": 22
+        },
+        {
+          "entity": "repository",
+          "startPos": 24,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "what about the facebook/react?",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 15,
+          "endPos": 22
+        },
+        {
+          "entity": "repository",
+          "startPos": 24,
+          "endPos": 28
+        }
+      ]
+    }
+  ]
+}

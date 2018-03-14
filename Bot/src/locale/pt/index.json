@@ -4,14 +4,14 @@
   "sorry":
     "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
 
+  "greeting_error": "Ocorreu um erro.",
+
   "stars_response": "O repositório %s possui %d estrelas.",
   "stars_error":
     "Por favor, digite um repositório no formato usuário/repositório.",
 
   "repository_info_response":
-    "O repositório %s possui %d estrelas, %d usuários assistindo e %d forks, também há %d commits e %d contribuidores.",
-  "repository_info_welcome":
-    "Bem-vindo a busca de informações de repositórios do GitHub! Estamos analisando sua mensagem: '%s'.",
+    "O repositório %s usa a linguagem %s possui %d estrelas, %d forks e %d usuários assistindo.",
   "repository_info_error":
     "Por favor, digite um repositório no formato usuário/repositório.",
 
@@ -20,5 +20,5 @@
   "user_info_error": "Por valor, digite um usuário válido.",
 
   "trending_info": "Lista dos principais repositórios: %s.",
-  "trending_error": "Ocorreu um erro"
+  "trending_error": "Ocorreu um erro."
 }

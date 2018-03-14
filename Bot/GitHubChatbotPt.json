@@ -1,0 +1,392 @@
+{
+  "luis_schema_version": "2.1.0",
+  "versionId": "0.1",
+  "name": "GitHubChatbotPt",
+  "desc": "",
+  "culture": "pt-br",
+  "intents": [
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "RepositoryInfo"
+    },
+    {
+      "name": "Stars"
+    },
+    {
+      "name": "Trending"
+    },
+    {
+      "name": "UserInfo"
+    }
+  ],
+  "entities": [
+    {
+      "name": "repository"
+    },
+    {
+      "name": "user"
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "bing_entities": ["datetimeV2"],
+  "model_features": [],
+  "regex_features": [],
+  "utterances": [
+    {
+      "text": "boa tarde",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "bom dia",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "como está o microsoft/typescript",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 12,
+          "endPos": 20
+        },
+        {
+          "entity": "repository",
+          "startPos": 22,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "como está o perfil de alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "como está o repositório alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 33
+        },
+        {
+          "entity": "repository",
+          "startPos": 35,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "como estão as tendências hoje",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "como estão os trendings hoje",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "como você está?",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "estrelas de alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 12,
+          "endPos": 21
+        },
+        {
+          "entity": "repository",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "eu gostaria de saber o número de estrelas de facebook/react",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 45,
+          "endPos": 52
+        },
+        {
+          "entity": "repository",
+          "startPos": 54,
+          "endPos": 58
+        }
+      ]
+    },
+    {
+      "text": "eu gostaria de saber o número de stars de facebook/react",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 42,
+          "endPos": 49
+        },
+        {
+          "entity": "repository",
+          "startPos": 51,
+          "endPos": 55
+        }
+      ]
+    },
+    {
+      "text": "eu gostaria de saber sobre o repositório angular/angular",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 41,
+          "endPos": 47
+        },
+        {
+          "entity": "repository",
+          "startPos": 49,
+          "endPos": 55
+        }
+      ]
+    },
+    {
+      "text": "eu quero saber sobre o facebook/react",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 23,
+          "endPos": 30
+        },
+        {
+          "entity": "repository",
+          "startPos": 32,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "eu quero saber sobre o haskellcamargo",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 23,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "me fale sobre o repositório alefesouza/albrowser",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 28,
+          "endPos": 37
+        },
+        {
+          "entity": "repository",
+          "startPos": 39,
+          "endPos": 47
+        }
+      ]
+    },
+    {
+      "text": "me fale sobre o repositório vuejs/vue",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 28,
+          "endPos": 32
+        },
+        {
+          "entity": "repository",
+          "startPos": 34,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "me mostre as tendências",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "me mostre como está o mpj",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "me mostre informações sobre o repositório microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 42,
+          "endPos": 50
+        },
+        {
+          "entity": "repository",
+          "startPos": 52,
+          "endPos": 57
+        }
+      ]
+    },
+    {
+      "text": "me mostre informações sobre vedovelli",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 28,
+          "endPos": 36
+        }
+      ]
+    },
+    {
+      "text": "me mostre o número de estrelas de vuejs/vue",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 34,
+          "endPos": 38
+        },
+        {
+          "entity": "repository",
+          "startPos": 40,
+          "endPos": 42
+        }
+      ]
+    },
+    {
+      "text": "me mostre o número de stars de vuejs/vue",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 31,
+          "endPos": 35
+        },
+        {
+          "entity": "repository",
+          "startPos": 37,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "me mostre o perfil do alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "me mostre os repositórios nas tendências",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "me mostre os repositórios nos trending",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "me mostre os trending",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "oi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "olá",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "quantas estrelas tem o repositório alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 35,
+          "endPos": 44
+        },
+        {
+          "entity": "repository",
+          "startPos": 46,
+          "endPos": 52
+        }
+      ]
+    },
+    {
+      "text": "quantas stars tem o repositório alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 32,
+          "endPos": 41
+        },
+        {
+          "entity": "repository",
+          "startPos": 43,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "stars de alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 9,
+          "endPos": 18
+        },
+        {
+          "entity": "repository",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    }
+  ]
+}

@@ -3,6 +3,7 @@ import * as builder from 'botbuilder';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
 
+import GreetingDialog from './dialogs/GreetingDialog';
 import RepositoryInfoDialog from './dialogs/RepositoryInfoDialog';
 import StarsDialog from './dialogs/StarsDialog';
 import TimelineDialog from './dialogs/TimelineDialog';
@@ -34,6 +35,13 @@ bot.recognizer(recognizer);
 bot.set('localizerSettings', {
   botLocalePath: path.join(__dirname, 'locale'),
   defaultLocale: 'en',
+});
+
+bot.dialog('Greeting', GreetingDialog).triggerAction({
+  matches: 'Greeting',
+  onInterrupted: (session) => {
+    session.send('greeting_error');
+  },
 });
 
 bot.dialog('RepositoryInfo', RepositoryInfoDialog).triggerAction({
