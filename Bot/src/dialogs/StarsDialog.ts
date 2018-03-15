@@ -36,7 +36,9 @@ const StarsResult: builder.IDialogWaterfallStep = async (session, results) => {
   const json = await repoInfo.json();
 
   session.send(
-    `The repository ${user}/${repository} has ${json.stargazers_count} stars.`,
+    'stars_response',
+    `${user}/${repository}`,
+    json.stargazers_count,
   );
 
   session.endDialog();

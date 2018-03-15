@@ -26,6 +26,9 @@
   ],
   "entities": [
     {
+      "name": "language"
+    },
+    {
       "name": "repository"
     },
     {
@@ -34,7 +37,9 @@
   ],
   "composites": [],
   "closedLists": [],
-  "bing_entities": ["datetimeV2"],
+  "bing_entities": [
+    "datetimeV2"
+  ],
   "model_features": [],
   "regex_features": [],
   "utterances": [
@@ -203,6 +208,61 @@
       ]
     },
     {
+      "text": "javascript trending repositories today",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 0,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "javascript trendings this month",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 0,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "php trendings",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "php trendings today",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "php trends",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 0,
+          "endPos": 2
+        }
+      ]
+    },
+    {
       "text": "show me how is the user mpj",
       "intent": "UserInfo",
       "entities": [
@@ -241,6 +301,54 @@
       ]
     },
     {
+      "text": "show me the c# trending repositories",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 12,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "show me the java trending repositories",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "show me the javascript trending repositories today",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 12,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "show me the main repositories",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "show me the main repositories of php this week",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 33,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "show me the main repositories this week",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
       "text": "show me the number of stars of alefesouza/descicloapp-chrome",
       "intent": "Stars",
       "entities": [
@@ -257,12 +365,33 @@
       ]
     },
     {
+      "text": "show me the php trends",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 12,
+          "endPos": 14
+        }
+      ]
+    },
+    {
       "text": "show me the trending repositories",
       "intent": "Trending",
       "entities": []
     },
     {
       "text": "show me the trendings",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "show me the trends",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "show me this week trending repositories",
       "intent": "Trending",
       "entities": []
     },
@@ -308,6 +437,21 @@
           "endPos": 26
         }
       ]
+    },
+    {
+      "text": "trending repositories",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "trendings",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "trends",
+      "intent": "Trending",
+      "entities": []
     },
     {
       "text": "what about the facebook/react?",

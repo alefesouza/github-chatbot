@@ -26,6 +26,9 @@
   ],
   "entities": [
     {
+      "name": "language"
+    },
+    {
       "name": "repository"
     },
     {
@@ -34,7 +37,9 @@
   ],
   "composites": [],
   "closedLists": [],
-  "bing_entities": ["datetimeV2"],
+  "bing_entities": [
+    "datetimeV2"
+  ],
   "model_features": [],
   "regex_features": [],
   "utterances": [
@@ -235,6 +240,17 @@
       "entities": []
     },
     {
+      "text": "me mostre as tendências de php esta semana",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 27,
+          "endPos": 29
+        }
+      ]
+    },
+    {
       "text": "me mostre como está o mpj",
       "intent": "UserInfo",
       "entities": [
@@ -316,6 +332,33 @@
       ]
     },
     {
+      "text": "me mostre os principais repositórios",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "me mostre os principais repositórios de javascript este mês",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 40,
+          "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "me mostre os repositório de java em tendência",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 28,
+          "endPos": 31
+        }
+      ]
+    },
+    {
       "text": "me mostre os repositórios nas tendências",
       "intent": "Trending",
       "entities": []
@@ -326,7 +369,18 @@
       "entities": []
     },
     {
-      "text": "me mostre os trending",
+      "text": "me mostre os trending repositories de java esta semana",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 38,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "me mostre os trendings",
       "intent": "Trending",
       "entities": []
     },
@@ -385,6 +439,131 @@
           "entity": "repository",
           "startPos": 20,
           "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "tendências",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "tendências de javascript",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 14,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "tendências de php",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 14,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "tendências de php hoje",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 14,
+          "endPos": 16
+        }
+      ]
+    },
+    {
+      "text": "trendings",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "trendings de javascript",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 13,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "trendings de php",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 13,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "trends",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "trends de javascript",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 10,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "trends de php",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 10,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "trends de php esta semana",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 10,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "trends de php este mês",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 10,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "trends de php hoje",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 10,
+          "endPos": 12
         }
       ]
     }

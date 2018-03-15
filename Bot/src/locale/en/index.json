@@ -18,6 +18,14 @@
     "The user %s is named %s, follow %d users, has %d followers and %d repositories.",
   "user_info_error": "Please provide a valid user.",
 
-  "trending": "Trending repository list: %s.",
+  "trending_consulting": "Getting trending repositories %s on GitHub...",
+  "trending_consulting_by_time":
+    "Getting trending repositories of %s of %s on GitHub...",
+  "trending_all_languages": "all languages",
+  "trending_today": "today",
+  "trending_by_week": "this week",
+  "trending_by_month": "this month",
+  "trending_info_response":
+    "The repository %s uses the language %s, it has %d stars, %d forks, and it has got %d new stars.",
   "trending_error": "An error occurred."
 }

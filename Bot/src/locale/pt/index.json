@@ -19,6 +19,13 @@
     "O usuário %s se chama %s, segue %d usuários, possui %d seguidores e %d repositórios.",
   "user_info_error": "Por valor, digite um usuário válido.",
 
-  "trending_info": "Lista dos principais repositórios: %s.",
+  "trending_consulting":
+    "Recebendos os trending repositories de %s %s no GitHub...",
+  "trending_all_languages": "todas as linguagens",
+  "trending_today": "de hoje",
+  "trending_by_week": "desta semana",
+  "trending_by_month": "deste mês",
+  "trending_info_response":
+    "O repositório %s usa a linguagem %s, possui %d estrelas, %d forks, e ganhou %d novas estrelas.",
   "trending_error": "Ocorreu um erro."
 }

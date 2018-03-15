@@ -8,21 +8,25 @@ const gitHubCrawler = (expressRes) => (error, res, done) => {
   $('ol.repo-list li').each(function() {
     const $this = $(this);
 
-    const getSelector = (selector) =>
+    const getSelector = (selector): string =>
       $this
         .find(selector)
         .text()
         .trim();
 
-    const url = getSelector('h3 a').replace(/ /g, '');
+    // Pipeline operator :(
+    const getNumber = (selector) =>
+      parseInt(getSelector(selector).replace(/[^0-9]/g, ''));
 
-    const repository = {
-      url,
+    const name = getSelector('h3 a').replace(/ /g, '');
+
+    const repository: Repository = {
+      name,
       description: getSelector('.py-1'),
-      stars: getSelector('a[href*=stargazers]'),
-      stars_this_week: getSelector('.float-sm-right'),
-      forks: getSelector('a[href*=network]'),
-      languages: getSelector('span[itemprop=programmingLanguage]'),
+      stars: getNumber('a[href*=stargazers]'),
+      recent_stars: getNumber('.float-sm-right'),
+      forks: getNumber('a[href*=network]'),
+      language: getSelector('span[itemprop=programmingLanguage]'),
     };
 
     repos.push(repository);

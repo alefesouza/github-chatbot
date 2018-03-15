@@ -13,9 +13,14 @@ app.get('/', (req, res) => {
   let uri = 'https://github.com/trending/';
 
   const language = req.query.language;
+  const since = req.query.since;
 
   if (language) {
     uri += language;
+  }
+
+  if (since) {
+    uri += '?since=' + since;
   }
 
   c.queue([
