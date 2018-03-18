@@ -18,7 +18,7 @@
     "The user %s is named %s, follow %d users, has %d followers and %d repositories.",
   "user_info_error": "Please provide a valid user.",
 
-  "trending_consulting": "Getting trending repositories %s on GitHub...",
+  "trending_consulting": "Getting trending repositories of %s on GitHub...",
   "trending_consulting_by_time":
     "Getting trending repositories of %s of %s on GitHub...",
   "trending_all_languages": "all languages",

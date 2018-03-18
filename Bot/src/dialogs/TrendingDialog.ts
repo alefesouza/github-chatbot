@@ -1,5 +1,6 @@
 import * as builder from 'botbuilder';
-import fetch from 'node-fetch';
+
+import getTrendings from './../utils/github-crawler';
 
 const Trending: builder.IDialogWaterfallStep = (session, args, next) => {
   const datetimeEntity = builder.EntityRecognizer.findEntity(
@@ -65,11 +66,7 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
     since = (language ? '&' : '?') + 'since=' + since;
   }
 
-  const url = process.env.BACKEND_URL + language + since;
-  console.log(url);
-
-  const repoInfo = await fetch(url);
-  const repositories: Repository[] = await repoInfo.json();
+  const repositories = await getTrendings(language, since);
 
   const cards = [];
 
