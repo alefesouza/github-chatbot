@@ -66,6 +66,22 @@
       "entities": []
     },
     {
+      "text": "alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
       "text": "alefesouza/droidex stars",
       "intent": "Stars",
       "entities": [

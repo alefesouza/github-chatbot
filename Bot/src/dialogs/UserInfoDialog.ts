@@ -9,15 +9,10 @@ const UserInfo: builder.IDialogWaterfallStep = (session, args, next) => {
 
   if (userEntity) {
     next({
-      response: {
-        user: userEntity.entity,
-      },
+      response: userEntity.entity,
     });
   } else {
-    builder.Prompts.text(
-      session,
-      'Please enter the repository in the format user/repository',
-    );
+    builder.Prompts.text(session, session.gettext('user_info_error'));
   }
 };
 
@@ -25,9 +20,18 @@ const UserInfoResult: builder.IDialogWaterfallStep = async (
   session,
   results,
 ) => {
-  const { user } = results.response;
+  const user = results.response;
+
+  session.sendTyping();
 
   const userInfo = await fetch(`https://api.github.com/users/${user}`);
+
+  if (userInfo.message) {
+    session.endDialog('user_info_not_found', user);
+
+    return;
+  }
+
   const {
     login,
     name,
@@ -51,9 +55,9 @@ const UserInfoResult: builder.IDialogWaterfallStep = async (
     .title(name)
     .subtitle(bio ? bio : '')
     .text(
-      `The user ${login}, ${company ? `works at ${company}` : ''}, ${
-        location ? `lives at ${location}` : ''
-      }, has ${followers} followers and follows ${following} users`,
+      `The user ${login},${company ? ` works at ${company},` : ''}${
+        location ? ` lives at ${location}, ` : ''
+      } has ${followers} followers and follows ${following} users`,
     )
     .images([builder.CardImage.create(session, avatar_url)])
     .buttons(buttons);

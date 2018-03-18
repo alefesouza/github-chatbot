@@ -1,8 +1,12 @@
 {
   "hello":
-    "Olá! Eu sou um chatbot open source que exibe informações do GitHub, caso tenha dificuldades, digite 'ajuda'. Clique no botão abaixo para visitar meu repositório.",
+    "Olá! Eu sou um chatbot open source que exibe informações do GitHub, caso tenha dificuldades, digite \"ajuda\". Clique no botão abaixo para visitar meu repositório.",
   "sorry":
     "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
+  "sorry_attachments": "Desculpe, eu não sei como tratar anexos.",
+
+  "my_repository": "Meu repositório",
+  "show_trends": "Exibir trending repositories",
 
   "generic_error": "Ocorreu um erro.",
 
@@ -14,10 +18,12 @@
     "O repositório %s usa a linguagem %s possui %d estrelas, %d forks e %d watchers.",
   "repository_info_error":
     "Por favor, digite um repositório no formato usuário/repositório.",
+  "repository_info_not_found": "O repositório %s/%s não foi encontrado.",
 
   "user_info_response":
     "O usuário %s se chama %s, segue %d usuários, possui %d seguidores e %d repositórios.",
   "user_info_error": "Por valor, digite um usuário válido.",
+  "user_info_not_found": "O usuário %s não foi encontrado.",
 
   "trending_consulting":
     "Recebendos os trending repositories de %s %s no GitHub...",

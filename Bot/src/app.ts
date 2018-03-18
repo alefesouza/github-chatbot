@@ -24,7 +24,11 @@ server.listen(process.env.PORT || 3978, () => {
 server.post('/api/messages', connector.listen());
 
 const bot = new builder.UniversalBot(connector, (session) => {
-  session.send('sorry', session.message.text);
+  if (session.message.attachments.length > 0) {
+    session.send('sorry_attachments');
+  } else {
+    session.send('sorry', session.message.text);
+  }
 });
 
 bot.set('storage', new builder.MemoryBotStorage());
@@ -115,8 +119,9 @@ function helloMessage(session) {
       builder.CardAction.openUrl(
         session,
         'https://github.com/alefesouza/github-chatbot',
-        'GitHub',
+        'my_repository',
       ),
+      builder.CardAction.postBack(session, 'trendings', 'show_trends'),
     ]);
 
   const msg = new builder.Message(session).addAttachment(card);

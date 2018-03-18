@@ -14,16 +14,10 @@ const RepositoryInfo: builder.IDialogWaterfallStep = (session, args, next) => {
 
   if (userEntity && repositoryEntity) {
     next({
-      response: {
-        user: userEntity.entity,
-        repository: repositoryEntity.entity,
-      },
+      response: userEntity.entity + '/' + repositoryEntity.entity,
     });
   } else {
-    builder.Prompts.text(
-      session,
-      'Please enter the repository in the format user/repository',
-    );
+    builder.Prompts.text(session, session.gettext('repository_info_error'));
   }
 };
 
@@ -31,12 +25,18 @@ const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
   session,
   results,
 ) => {
-  const { user, repository } = results.response;
+  const repository = results.response;
 
-  const repoInfo = await fetch(
-    `https://api.github.com/repos/${user}/${repository}`,
-  );
+  session.sendTyping();
+
+  const repoInfo = await fetch(`https://api.github.com/repos/${repository}`);
   const json = await repoInfo.json();
+
+  if (json.message) {
+    session.endDialog('repository_info_not_found', repository);
+
+    return;
+  }
 
   const buttons = [
     builder.CardAction.openUrl(session, json.html_url, 'GitHub'),
@@ -47,12 +47,12 @@ const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
   }
 
   const card = new builder.ThumbnailCard(session)
-    .title(`${user}/${repository}`)
+    .title(repository)
     .subtitle(json.description)
     .text(
       session.gettext(
         'repository_info_response',
-        `${user}/${repository}`,
+        repository,
         json.language,
         json.stargazers_count,
         json.forks_count,

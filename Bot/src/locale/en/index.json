@@ -1,22 +1,28 @@
 {
   "hello":
-    "Hello! I'm a chatbot who gets GitHub information, type 'help' if you need some assistance. Click on the button below to visit my repository.",
+    "Hello! I'm a chatbot who gets GitHub information, type \"help\" if you need some assistance. Click on the button below to visit my repository.",
   "sorry":
     "Sorry, I did not understand '%s'. Type 'help' if you need assistance.",
+  "sorry_attachments": "Sorry, I don't how to deal with attachments.",
+
+  "my_repository": "My Repository",
+  "show_trends": "Show Trending Repositories",
 
   "generic_error": "An error occurred.",
 
   "stars_response": "The repository %s has %d stars.",
-  "stars_error": "Please provide a repository in the format user/repository.",
+  "stars_error": "Please provide a repository with the format user/repository.",
 
   "repository_info_response":
     "The repository %s uses the language %s, it has %d stars, %d forks and %d watchers.",
   "repository_info_error":
-    "Please provide a repository in the format user/repository.",
+    "Please provide a repository with the format user/repository.",
+  "repository_info_not_found": "The repository %s/%s doesn't exist.",
 
   "user_info_response":
     "The user %s is named %s, follow %d users, has %d followers and %d repositories.",
   "user_info_error": "Please provide a valid user.",
+  "user_info_not_found": "The user %s doesn't exists.",
 
   "trending_consulting":
     "Getting trending repositories of %s of %s on GitHub...",
