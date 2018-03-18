@@ -56,16 +56,6 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
 
   session.send('trending_consulting', theLanguage, period);
 
-  if (language) {
-    language = '?language=' + language;
-  } else {
-    language = '';
-  }
-
-  if (since) {
-    since = (language ? '&' : '?') + 'since=' + since;
-  }
-
   session.sendTyping();
 
   const typingInterval = setInterval(() => {
