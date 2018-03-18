@@ -6,7 +6,16 @@
   "culture": "en-us",
   "intents": [
     {
+      "name": "About"
+    },
+    {
       "name": "Greeting"
+    },
+    {
+      "name": "Greeting2"
+    },
+    {
+      "name": "Help"
     },
     {
       "name": "None"
@@ -16,6 +25,9 @@
     },
     {
       "name": "Stars"
+    },
+    {
+      "name": "Thanks"
     },
     {
       "name": "Trending"
@@ -44,6 +56,11 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "about",
+      "intent": "About",
+      "entities": []
+    },
+    {
       "text": "alefesouza profile",
       "intent": "UserInfo",
       "entities": [
@@ -67,6 +84,22 @@
           "entity": "repository",
           "startPos": 11,
           "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/github-chatbot",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 24
         }
       ]
     },
@@ -113,8 +146,18 @@
       "entities": []
     },
     {
+      "text": "great",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
       "text": "hello",
       "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "Help",
       "entities": []
     },
     {
@@ -140,7 +183,7 @@
     },
     {
       "text": "how are you",
-      "intent": "Greeting",
+      "intent": "Greeting2",
       "entities": []
     },
     {
@@ -208,6 +251,26 @@
       ]
     },
     {
+      "text": "i did't get it",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i did't understand",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i did't understand how it works",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "i need some assistance",
+      "intent": "Help",
+      "entities": []
+    },
+    {
       "text": "i want to know about the alefesouza",
       "intent": "UserInfo",
       "entities": [
@@ -233,6 +296,11 @@
           "endPos": 35
         }
       ]
+    },
+    {
+      "text": "i want to know more about you",
+      "intent": "About",
+      "entities": []
     },
     {
       "text": "i would like to know about the alefesouza",
@@ -478,6 +546,17 @@
       ]
     },
     {
+      "text": "show me the trending javascript repositories this week",
+      "intent": "Trending",
+      "entities": [
+        {
+          "entity": "language",
+          "startPos": 21,
+          "endPos": 30
+        }
+      ]
+    },
+    {
       "text": "show me the trending repositories",
       "intent": "Trending",
       "entities": []
@@ -557,6 +636,41 @@
       ]
     },
     {
+      "text": "tell me about you",
+      "intent": "About",
+      "entities": []
+    },
+    {
+      "text": "tell me how to talk to you",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "tell me how to use you",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "thank you",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you so much",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "thank you very much",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "thanks",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
       "text": "trending repositories",
       "intent": "Trending",
       "entities": []
@@ -586,6 +700,21 @@
           "endPos": 28
         }
       ]
+    },
+    {
+      "text": "what's up",
+      "intent": "Greeting2",
+      "entities": []
+    },
+    {
+      "text": "who's your creator",
+      "intent": "About",
+      "entities": []
+    },
+    {
+      "text": "you're so great",
+      "intent": "Thanks",
+      "entities": []
     }
   ]
 }

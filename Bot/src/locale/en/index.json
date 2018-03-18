@@ -1,10 +1,10 @@
 {
   "hello":
-    "Hello! I'm a bot who get GitHub information, type 'help' if you need some assistance.",
+    "Hello! I'm a chatbot who gets GitHub information, type 'help' if you need some assistance. Click on the button below to visit my repository.",
   "sorry":
     "Sorry, I did not understand '%s'. Type 'help' if you need assistance.",
 
-  "greeting_error": "An error occurred.",
+  "generic_error": "An error occurred.",
 
   "stars_response": "The repository %s has %d stars.",
   "stars_error": "Please provide a repository in the format user/repository.",
@@ -18,8 +18,7 @@
     "The user %s is named %s, follow %d users, has %d followers and %d repositories.",
   "user_info_error": "Please provide a valid user.",
 
-  "trending_consulting": "Getting trending repositories of %s on GitHub...",
-  "trending_consulting_by_time":
+  "trending_consulting":
     "Getting trending repositories of %s of %s on GitHub...",
   "trending_all_languages": "all languages",
   "trending_today": "today",
@@ -27,5 +26,15 @@
   "trending_by_month": "this month",
   "trending_info_response":
     "The repository %s uses the language %s, it has %d stars, %d forks, and it has got %d new stars.",
-  "trending_error": "An error occurred."
+
+  "greeting2": "I'm fine, thanks =)",
+  "thanks": [
+    "You're welcome :)",
+    "No problem :)",
+    "If you need more informations, just talk to me again :)"
+  ],
+  "help":
+    "I'm a chatbot who gets GitHub information, with me you can:\n\n• Get repositories informations, such as star and fork number - **Example:** show me the vuejs/vue reposity **/** repo laravel/laravel\n\n• Get user informations, such as follower and following number. - **Example:** show me the alefesouza profile **/** user alefesouza\n\n• Get only the number of stars of a repository - **Example:** How many stars have the facebook/react repo? **/** microsoft/vscode stars\n\n• Show a list of trending repositories by programming language and time. - **Example:** Show me the trending JavaScript repositories this month. **/** trendings",
+  "about":
+    "This is an open source project by Alefe Souza, created as the final project for the Maratona Bots (Bots Marathon), a free online course from Microsoft, you can check the source code on https://github.com/alefesouza/github-chatbot\n\n\n\n**Acknowledgments**\n\n\n\nTo all Maratona Bots instructors, probably without them this project wouldn't be possible:\n\n\n\n• André Luiz Secco\n\n• Angelo Belchior\n\n• Cynthia Zanoni\n\n• Jucinei Pereira dos Santos\n\n• Vitor Pereira"
 }

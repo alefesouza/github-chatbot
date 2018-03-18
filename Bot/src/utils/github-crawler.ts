@@ -16,7 +16,10 @@ const getCrawlerInfo = ($) => {
   const getNumber = (elem, selector) =>
     parseInt(getSelector(elem, selector).replace(/[^0-9]/g, ''));
 
-  $('ol.repo-list li').each(function() {
+  $('ol.repo-list li').each(function(i) {
+    // Skype doesn't show it if it has more than 10 items
+    if (i === 10) return false;
+
     const $this = $(this);
 
     const name = getSelector($this, 'h3 a').replace(/ /g, '');

@@ -3,7 +3,6 @@ import * as builder from 'botbuilder';
 import * as dotenv from 'dotenv';
 import * as path from 'path';
 
-import GreetingDialog from './dialogs/GreetingDialog';
 import RepositoryInfoDialog from './dialogs/RepositoryInfoDialog';
 import StarsDialog from './dialogs/StarsDialog';
 import TrendingDialog from './dialogs/TrendingDialog';
@@ -38,13 +37,6 @@ bot.set('localizerSettings', {
 const recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
 bot.recognizer(recognizer);
 
-bot.dialog('Greeting', GreetingDialog).triggerAction({
-  matches: 'Greeting',
-  onInterrupted: (session) => {
-    session.send('greeting_error');
-  },
-});
-
 bot.dialog('RepositoryInfo', RepositoryInfoDialog).triggerAction({
   matches: 'RepositoryInfo',
   onInterrupted: (session) => {
@@ -62,7 +54,7 @@ bot.dialog('Stars', StarsDialog).triggerAction({
 bot.dialog('Trending', TrendingDialog).triggerAction({
   matches: 'Trending',
   onInterrupted: (session) => {
-    session.send('trending_error');
+    session.send('generic_error');
   },
 });
 
@@ -73,6 +65,37 @@ bot.dialog('UserInfo', UserInfoDialog).triggerAction({
   },
 });
 
+bot
+  .dialog('Greeting', (session) => {
+    helloMessage(session);
+  })
+  .triggerAction({
+    matches: 'Greeting',
+    onInterrupted: (session) => {
+      session.send('generic_error');
+    },
+  });
+
+const genericDialog = (name: string) => {
+  bot
+    .dialog(name, (session) => {
+      session.send(name.toLocaleLowerCase());
+
+      session.endDialog();
+    })
+    .triggerAction({
+      matches: name,
+      onInterrupted: (session) => {
+        session.send('generic_error');
+      },
+    });
+};
+
+genericDialog('Greeting2');
+genericDialog('Thanks');
+genericDialog('Help');
+genericDialog('About');
+
 bot.on('conversationUpdate', (update: builder.IConversationUpdate) => {
   if (
     update.membersAdded &&
@@ -80,7 +103,22 @@ bot.on('conversationUpdate', (update: builder.IConversationUpdate) => {
     update.membersAdded[0].id !== 'default-bot'
   ) {
     bot.loadSession(update.address, (err, session) => {
-      session.send('hello');
+      helloMessage(session);
     });
   }
 });
+
+function helloMessage(session) {
+  const card = new builder.ThumbnailCard(session)
+    .text('hello')
+    .buttons([
+      builder.CardAction.openUrl(
+        session,
+        'https://github.com/alefesouza/github-chatbot',
+        'GitHub',
+      ),
+    ]);
+
+  const msg = new builder.Message(session).addAttachment(card);
+  session.send(msg);
+}

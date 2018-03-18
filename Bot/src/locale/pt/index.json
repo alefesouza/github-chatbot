@@ -1,17 +1,17 @@
 {
   "hello":
-    "Olá! Eu sou um bot que recebe informações do GitHub, caso tenha dificuldades, digite 'ajuda'.",
+    "Olá! Eu sou um chatbot open source que exibe informações do GitHub, caso tenha dificuldades, digite 'ajuda'. Clique no botão abaixo para visitar meu repositório.",
   "sorry":
     "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
 
-  "greeting_error": "Ocorreu um erro.",
+  "generic_error": "Ocorreu um erro.",
 
   "stars_response": "O repositório %s possui %d estrelas.",
   "stars_error":
     "Por favor, digite um repositório no formato usuário/repositório.",
 
   "repository_info_response":
-    "O repositório %s usa a linguagem %s possui %d estrelas, %d forks e %d usuários assistindo.",
+    "O repositório %s usa a linguagem %s possui %d estrelas, %d forks e %d watchers.",
   "repository_info_error":
     "Por favor, digite um repositório no formato usuário/repositório.",
 
@@ -27,5 +27,15 @@
   "trending_by_month": "deste mês",
   "trending_info_response":
     "O repositório %s usa a linguagem %s, possui %d estrelas, %d forks, e ganhou %d novas estrelas.",
-  "trending_error": "Ocorreu um erro."
+
+  "greeting2": "Eu estou bem, obrigado =)",
+  "thanks": [
+    "De nada :)",
+    "Não há de que :)",
+    "Se precisar de mais informações, só chamar :)"
+  ],
+  "help":
+    "Eu sou um chatbot que recebe informações do GitHub, comigo você pode:\n\n\n\n• Receber informações de repositórios, como o número de stars e forks - **Exemplo:** me mostre informações do repositório vuejs/vue **/** repo laravel/laravel\n\n• Receber informações de usuários, como o número de seguidores e de que esta seguindo. - **Exemplo:** me mostre informações do perfil alefesouza **/** user alefesouza\n\n• Receber apenas o número de stars de um repositório. - **Exemplo:** Quantas estrelas tem o repositório facebook/react **/** microsoft/vscode stars\n\n• Mostrar uma listas dos principais repositórios por linguagem de programação e tempo. - **Exemplo:** Me mostre os principais repositórios de JavaScript este mês **/** trendings.",
+  "about":
+    "Esse é um projeto open source desenvolvido por Alefe Souza, criado para ser o projeto final da Maratona Bots, um curso gratuito da Microsoft, você pode checar o código fonte em https://github.com/alefesouza/github-chatbot\n\n\n\n**Agradecimentos**\n\n\n\nPara todos os instrutores da Maratona Bots, provavelmente sem eles esse projeto não seria possível:\n\n\n\n• André Luiz Secco\n\n• Angelo Belchior\n\n• Cynthia Zanoni\n\n• Jucinei Pereira dos Santos\n\n• Vitor Pereira"
 }

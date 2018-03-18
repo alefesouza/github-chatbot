@@ -6,7 +6,16 @@
   "culture": "pt-br",
   "intents": [
     {
+      "name": "About"
+    },
+    {
       "name": "Greeting"
+    },
+    {
+      "name": "Greeting2"
+    },
+    {
+      "name": "Help"
     },
     {
       "name": "None"
@@ -16,6 +25,9 @@
     },
     {
       "name": "Stars"
+    },
+    {
+      "name": "Thanks"
     },
     {
       "name": "Trending"
@@ -44,6 +56,16 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "about",
+      "intent": "About",
+      "entities": []
+    },
+    {
+      "text": "ajuda",
+      "intent": "Help",
+      "entities": []
+    },
+    {
       "text": "alefesouza/droidex stars",
       "intent": "Stars",
       "entities": [
@@ -56,6 +78,22 @@
           "entity": "repository",
           "startPos": 11,
           "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/github-chatbot",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 24
         }
       ]
     },
@@ -156,7 +194,7 @@
     },
     {
       "text": "como você está?",
-      "intent": "Greeting",
+      "intent": "Greeting2",
       "entities": []
     },
     {
@@ -251,6 +289,21 @@
       ]
     },
     {
+      "text": "eu não entendo como isso funciona",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "eu preciso de ajuda",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "eu quero saber mais sobre você",
+      "intent": "About",
+      "entities": []
+    },
+    {
       "text": "eu quero saber sobre o facebook/react",
       "intent": "RepositoryInfo",
       "entities": [
@@ -276,6 +329,26 @@
           "endPos": 36
         }
       ]
+    },
+    {
+      "text": "eu tenho dúvidas",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "help",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "me fale como falar com você",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "me fale como usar você",
+      "intent": "Help",
+      "entities": []
     },
     {
       "text": "me fale sobre o repositório alefesouza/albrowser",
@@ -308,6 +381,11 @@
           "endPos": 36
         }
       ]
+    },
+    {
+      "text": "me fale sobre você",
+      "intent": "About",
+      "entities": []
     },
     {
       "text": "me mostre as tendências",
@@ -460,6 +538,31 @@
       "entities": []
     },
     {
+      "text": "muito bom",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "muito obrigado",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "não entendo",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "obrigado",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "obrigado pela ajuda",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
       "text": "oi",
       "intent": "Greeting",
       "entities": []
@@ -468,6 +571,17 @@
       "text": "olá",
       "intent": "Greeting",
       "entities": []
+    },
+    {
+      "text": "perfil alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 7,
+          "endPos": 16
+        }
+      ]
     },
     {
       "text": "perfil do alefesouza",
@@ -513,6 +627,11 @@
       ]
     },
     {
+      "text": "quem criou você?",
+      "intent": "About",
+      "entities": []
+    },
+    {
       "text": "repo alefesouza/droidex",
       "intent": "RepositoryInfo",
       "entities": [
@@ -543,6 +662,11 @@
           "endPos": 29
         }
       ]
+    },
+    {
+      "text": "sobre",
+      "intent": "About",
+      "entities": []
     },
     {
       "text": "stars alefesouza/droidex",
@@ -700,6 +824,43 @@
           "endPos": 12
         }
       ]
+    },
+    {
+      "text": "tudo bem?",
+      "intent": "Greeting2",
+      "entities": []
+    },
+    {
+      "text": "user alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "usuário alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "valeu",
+      "intent": "Thanks",
+      "entities": []
+    },
+    {
+      "text": "você é demais",
+      "intent": "Thanks",
+      "entities": []
     }
   ]
 }

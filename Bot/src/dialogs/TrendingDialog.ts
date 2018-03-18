@@ -66,6 +66,12 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
     since = (language ? '&' : '?') + 'since=' + since;
   }
 
+  session.sendTyping();
+
+  const typingInterval = setInterval(() => {
+    session.sendTyping();
+  }, 2000);
+
   const repositories = await getTrendings(language, since);
 
   const cards = [];
@@ -104,6 +110,8 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
   const response = new builder.Message(session)
     .attachmentLayout(builder.AttachmentLayout.carousel)
     .attachments(cards);
+
+  clearInterval(typingInterval);
 
   session.send(response);
 
