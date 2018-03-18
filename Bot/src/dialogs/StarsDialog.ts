@@ -1,6 +1,8 @@
 import * as builder from 'botbuilder';
 import fetch from 'node-fetch';
 
+import getRepository from '../utils/get-repository';
+
 const Stars: builder.IDialogWaterfallStep = (session, args, next) => {
   const userEntity = builder.EntityRecognizer.findEntity(
     args.intent.entities,
@@ -22,16 +24,17 @@ const Stars: builder.IDialogWaterfallStep = (session, args, next) => {
 };
 
 const StarsResult: builder.IDialogWaterfallStep = async (session, results) => {
-  const repository = results.response;
+  const repository = await getRepository(session, results);
 
-  session.sendTyping();
+  if (repository.message) {
+    return;
+  }
 
-  const repoInfo = await fetch(`https://api.github.com/repos/${repository}`);
-  const json = await repoInfo.json();
-
-  session.send('stars_response', repository, json.stargazers_count);
-
-  session.endDialog();
+  session.endDialog(
+    'stars_response',
+    repository.full_name,
+    repository.stargazers_count,
+  );
 };
 
 export default [Stars, StarsResult];

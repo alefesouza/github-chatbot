@@ -2,7 +2,11 @@
 
 This is a chatbot to get GitHub informations using [botbuilder](https://github.com/Microsoft/BotBuilder) for Node.js written in TypeScript, it uses [LUIS](https://luis.ai) to interprete messages and get intents and entities.
 
-It can get repository and user informations and the trending repositories list by language and time.
+This chatbot can:
+
+* Get repository and user informations.
+* Trending repositories list by programming language and time.
+* Search a repository by sending a image of its logo or mascot.
 
 I developed it to be my final project on the [Microsoft's Maratona Bots](https://ticapacitacion.com/curso/botspt/) (Bots Marathon), an online course about chatbots development.
 

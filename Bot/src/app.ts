@@ -8,6 +8,9 @@ import StarsDialog from './dialogs/StarsDialog';
 import TrendingDialog from './dialogs/TrendingDialog';
 import UserInfoDialog from './dialogs/UserInfoDialog';
 
+import hasImage from './utils/has-image';
+import getAttachment from './utils/get-attachment';
+
 dotenv.config();
 
 const server = restify.createServer();
@@ -23,11 +26,19 @@ server.listen(process.env.PORT || 3978, () => {
 
 server.post('/api/messages', connector.listen());
 
-const bot = new builder.UniversalBot(connector, (session) => {
-  if (session.message.attachments.length > 0) {
-    session.send('sorry_attachments');
+const bot = new builder.UniversalBot(connector, async (session) => {
+  const { text } = session.message;
+
+  if (hasImage(session)) {
+    await getAttachment(connector, session);
+
+    session.endDialog();
+  } else if (session.message.attachments.length > 0) {
+    session.endDialog('attachments_error');
+  } else if (text === '') {
+    helloMessage(session);
   } else {
-    session.send('sorry', session.message.text);
+    session.endDialog('sorry', text);
   }
 });
 
@@ -44,28 +55,28 @@ bot.recognizer(recognizer);
 bot.dialog('RepositoryInfo', RepositoryInfoDialog).triggerAction({
   matches: 'RepositoryInfo',
   onInterrupted: (session) => {
-    session.send('repository_info_error');
+    session.endDialog('repository_info_error');
   },
 });
 
 bot.dialog('Stars', StarsDialog).triggerAction({
   matches: 'Stars',
   onInterrupted: (session) => {
-    session.send('repository_info_error');
+    session.endDialog('repository_info_error');
   },
 });
 
 bot.dialog('Trending', TrendingDialog).triggerAction({
   matches: 'Trending',
   onInterrupted: (session) => {
-    session.send('generic_error');
+    session.endDialog('generic_error');
   },
 });
 
 bot.dialog('UserInfo', UserInfoDialog).triggerAction({
   matches: 'UserInfo',
   onInterrupted: (session) => {
-    session.send('user_info_error');
+    session.endDialog('user_info_error');
   },
 });
 
@@ -76,21 +87,19 @@ bot
   .triggerAction({
     matches: 'Greeting',
     onInterrupted: (session) => {
-      session.send('generic_error');
+      session.endDialog('generic_error');
     },
   });
 
 const genericDialog = (name: string) => {
   bot
     .dialog(name, (session) => {
-      session.send(name.toLocaleLowerCase());
-
-      session.endDialog();
+      session.endDialog(name.toLocaleLowerCase());
     })
     .triggerAction({
       matches: name,
       onInterrupted: (session) => {
-        session.send('generic_error');
+        session.endDialog('generic_error2');
       },
     });
 };
@@ -100,20 +109,24 @@ genericDialog('Thanks');
 genericDialog('Help');
 genericDialog('About');
 
-bot.on('conversationUpdate', (update: builder.IConversationUpdate) => {
-  if (
-    update.membersAdded &&
-    update.membersAdded.length > 0 &&
-    update.membersAdded[0].id !== 'default-bot'
-  ) {
-    bot.loadSession(update.address, (err, session) => {
+bot.on('conversationUpdate', (update) => {
+  const { membersAdded, address } = update;
+
+  if (!membersAdded) {
+    return;
+  }
+
+  const members = membersAdded.filter((id) => id.id === address.bot.id);
+
+  members.forEach(() => {
+    bot.loadSession(address, (err, session) => {
       helloMessage(session);
     });
-  }
+  });
 });
 
 function helloMessage(session) {
-  const card = new builder.ThumbnailCard(session)
+  const card = new builder.HeroCard(session)
     .text('hello')
     .buttons([
       builder.CardAction.openUrl(
@@ -126,4 +139,6 @@ function helloMessage(session) {
 
   const msg = new builder.Message(session).addAttachment(card);
   session.send(msg);
+
+  session.endDialog();
 }

@@ -56,6 +56,322 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "/comecar",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "/repo",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repo alefesouza xamtweet",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "repository",
+          "startPos": 17,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "/repo alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "repository",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghptchatbot",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repo@ghptchatbot alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 18,
+          "endPos": 27
+        },
+        {
+          "entity": "repository",
+          "startPos": 29,
+          "endPos": 35
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghptchatbot atom/atom",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 18,
+          "endPos": 21
+        },
+        {
+          "entity": "repository",
+          "startPos": 23,
+          "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghptchatbot electron/electron",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 18,
+          "endPos": 25
+        },
+        {
+          "entity": "repository",
+          "startPos": 27,
+          "endPos": 34
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghptchatbot microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 18,
+          "endPos": 26
+        },
+        {
+          "entity": "repository",
+          "startPos": 28,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "/repository",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repository alefesouza xamtweet",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 12,
+          "endPos": 21
+        },
+        {
+          "entity": "repository",
+          "startPos": 23,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "/repository alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 12,
+          "endPos": 21
+        },
+        {
+          "entity": "repository",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghptchatbot",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repository@ghptchatbot alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 33
+        },
+        {
+          "entity": "repository",
+          "startPos": 35,
+          "endPos": 41
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghptchatbot atom/atom",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 27
+        },
+        {
+          "entity": "repository",
+          "startPos": 29,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghptchatbot electron/electron",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 31
+        },
+        {
+          "entity": "repository",
+          "startPos": 33,
+          "endPos": 40
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghptchatbot microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 24,
+          "endPos": 32
+        },
+        {
+          "entity": "repository",
+          "startPos": 34,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "/stars",
+      "intent": "Stars",
+      "entities": []
+    },
+    {
+      "text": "/stars alefesouza xamtweet",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 7,
+          "endPos": 16
+        },
+        {
+          "entity": "repository",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "/stars alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 7,
+          "endPos": 16
+        },
+        {
+          "entity": "repository",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "/stars@ghptchatbot",
+      "intent": "Stars",
+      "entities": []
+    },
+    {
+      "text": "/start",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "/trendings",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/trendings@ghptchatbot",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/trends",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/trends@ghptchatbot",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/user",
+      "intent": "UserInfo",
+      "entities": []
+    },
+    {
+      "text": "/user alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "/user@ghptchatbot",
+      "intent": "UserInfo",
+      "entities": []
+    },
+    {
+      "text": "/user@ghptchatbot alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 18,
+          "endPos": 27
+        }
+      ]
+    },
+    {
       "text": "about",
       "intent": "About",
       "entities": []
@@ -146,12 +462,33 @@
       ]
     },
     {
+      "text": "atom/atom repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "repository",
+          "startPos": 5,
+          "endPos": 8
+        }
+      ]
+    },
+    {
       "text": "boa tarde",
       "intent": "Greeting",
       "entities": []
     },
     {
       "text": "bom dia",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "comecar",
       "intent": "Greeting",
       "entities": []
     },
@@ -212,6 +549,22 @@
       "text": "como você está?",
       "intent": "Greeting2",
       "entities": []
+    },
+    {
+      "text": "electron/electron repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "repository",
+          "startPos": 9,
+          "endPos": 16
+        }
+      ]
     },
     {
       "text": "estrelas alefesouza/droidex",
@@ -554,6 +907,22 @@
       "entities": []
     },
     {
+      "text": "microsoft/vscode repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "repository",
+          "startPos": 10,
+          "endPos": 15
+        }
+      ]
+    },
+    {
       "text": "muito bom",
       "intent": "Thanks",
       "entities": []
@@ -600,7 +969,7 @@
       ]
     },
     {
-      "text": "perfil do alefesouza",
+      "text": "perfil de alefesouza",
       "intent": "UserInfo",
       "entities": [
         {
@@ -664,6 +1033,54 @@
       ]
     },
     {
+      "text": "repo atom/atom",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 8
+        },
+        {
+          "entity": "repository",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "repo electron/electron",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 12
+        },
+        {
+          "entity": "repository",
+          "startPos": 14,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "repo microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "repository",
+          "startPos": 15,
+          "endPos": 20
+        }
+      ]
+    },
+    {
       "text": "repositório alefesouza/droidex",
       "intent": "RepositoryInfo",
       "entities": [
@@ -715,6 +1132,11 @@
           "endPos": 26
         }
       ]
+    },
+    {
+      "text": "start",
+      "intent": "Greeting",
+      "entities": []
     },
     {
       "text": "tendências",

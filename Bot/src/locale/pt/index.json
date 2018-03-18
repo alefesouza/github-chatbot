@@ -1,6 +1,6 @@
 {
   "hello":
-    "Olá! Eu sou um chatbot open source que exibe informações do GitHub, caso tenha dificuldades, digite \"ajuda\". Clique no botão abaixo para visitar meu repositório.",
+    "Olá! Eu sou um chatbot open source que exibe informações do GitHub, caso tenha dificuldades, digite \"ajuda\".",
   "sorry":
     "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
   "sorry_attachments": "Desculpe, eu não sei como tratar anexos.",
@@ -10,29 +10,32 @@
 
   "generic_error": "Ocorreu um erro.",
 
+  "attachments_repository": "Essa imagem pertence ao repositório %s.",
+  "attachments_info": "Informações do repositório",
+  "attachments_sorry": "Desculpe, eu não sei qual repositório é esse :(",
+  "attachments_error": "Por favor envie uma imagem.",
+
   "stars_response": "O repositório %s possui %d estrelas.",
-  "stars_error":
-    "Por favor, digite um repositório no formato usuário/repositório.",
 
   "repository_info_response":
     "O repositório %s usa a linguagem %s possui %d estrelas, %d forks e %d watchers.",
   "repository_info_error":
-    "Por favor, digite um repositório no formato usuário/repositório.",
+    "Por favor, digite um repositório no formato usuário/repositório:",
   "repository_info_not_found": "O repositório %s/%s não foi encontrado.",
 
   "user_info_response":
     "O usuário %s se chama %s, segue %d usuários, possui %d seguidores e %d repositórios.",
-  "user_info_error": "Por valor, digite um usuário válido.",
+  "user_info_error": "Por favor, digite um username:",
   "user_info_not_found": "O usuário %s não foi encontrado.",
 
   "trending_consulting":
-    "Recebendos os trending repositories de %s %s no GitHub...",
+    "Recebendo os principais repositórios %s sobre %s no GitHub...",
   "trending_all_languages": "todas as linguagens",
-  "trending_today": "de hoje",
-  "trending_by_week": "desta semana",
-  "trending_by_month": "deste mês",
+  "trending_today": "hoje",
+  "trending_by_week": "nesta semana",
+  "trending_by_month": "neste mês",
   "trending_info_response":
-    "O repositório %s usa a linguagem %s, possui %d estrelas, %d forks, e ganhou %d novas estrelas.",
+    "O repositório %s usa a linguagem %s, possui %d estrelas, %d forks, e ganhou %d novas estrelas %s.",
 
   "greeting2": "Eu estou bem, obrigado =)",
   "thanks": [
@@ -41,7 +44,7 @@
     "Se precisar de mais informações, só chamar :)"
   ],
   "help":
-    "Eu sou um chatbot que recebe informações do GitHub, comigo você pode:\n\n\n\n• Receber informações de repositórios, como o número de stars e forks - **Exemplo:** me mostre informações do repositório vuejs/vue **/** repo laravel/laravel\n\n• Receber informações de usuários, como o número de seguidores e de que esta seguindo. - **Exemplo:** me mostre informações do perfil alefesouza **/** user alefesouza\n\n• Receber apenas o número de stars de um repositório. - **Exemplo:** Quantas estrelas tem o repositório facebook/react **/** microsoft/vscode stars\n\n• Mostrar uma listas dos principais repositórios por linguagem de programação e tempo. - **Exemplo:** Me mostre os principais repositórios de JavaScript este mês **/** trendings.",
+    "Eu sou um chatbot que recebe informações do GitHub, comigo você pode:\n\n\n\n• Receber informações de repositórios, como o número de stars e forks - **Exemplo:** me mostre informações do repositório vuejs/vue **/** repo laravel/laravel\n\n• Receber informações de usuários, como o número de seguidores e de que esta seguindo. - **Exemplo:** me mostre informações do perfil alefesouza **/** user alefesouza\n\n• Receber apenas o número de stars de um repositório. - **Exemplo:** Quantas estrelas tem o repositório facebook/react **/** microsoft/vscode stars\n\n• Mostrar uma listas dos principais repositórios por linguagem de programação e tempo. - **Exemplo:** Me mostre os principais repositórios de JavaScript este mês **/** trendings.\n\n• Receber informações de um repositório por logo ou mascote - **Exemplo:** Tente enviar uma imagem do Tux ou do logo do VS Code.",
   "about":
     "Esse é um projeto open source desenvolvido por Alefe Souza, criado para ser o projeto final da Maratona Bots, um curso gratuito da Microsoft, você pode checar o código fonte em https://github.com/alefesouza/github-chatbot\n\n\n\n**Agradecimentos**\n\n\n\nPara todos os instrutores da Maratona Bots, provavelmente sem eles esse projeto não seria possível:\n\n\n\n• André Luiz Secco\n\n• Angelo Belchior\n\n• Cynthia Zanoni\n\n• Jucinei Pereira dos Santos\n\n• Vitor Pereira"
 }

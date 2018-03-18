@@ -10,16 +10,22 @@
     "build": "tsc",
     "start": "ts-node src/app.ts"
   },
-  "keywords": ["bot", "bot builder", "github"],
+  "keywords": [
+    "bot",
+    "bot builder",
+    "github"
+  ],
   "dependencies": {
     "botbuilder": "^3.14.0",
     "crawler": "^1.1.2",
     "dotenv": "^5.0.1",
+    "needle": "^2.2.0",
     "node-fetch": "^2.1.1",
     "restify": "^6.3.4"
   },
   "devDependencies": {
     "@types/node": "^9.4.7",
+    "@types/node-fetch": "^1.6.7",
     "@types/restify": "^5.0.7",
     "ts-node": "^5.0.1",
     "typescript": "^2.7.2"

@@ -56,6 +56,317 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "/ repository alefesouza droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 13,
+          "endPos": 22
+        },
+        {
+          "entity": "repository",
+          "startPos": 24,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "/repo",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repo alefesouza droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "repository",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "/repo alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "repository",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghchatbot",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repo@ghchatbot alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 16,
+          "endPos": 25
+        },
+        {
+          "entity": "repository",
+          "startPos": 27,
+          "endPos": 33
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghchatbot atom/atom",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 16,
+          "endPos": 19
+        },
+        {
+          "entity": "repository",
+          "startPos": 21,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghchatbot electron/electron",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 16,
+          "endPos": 23
+        },
+        {
+          "entity": "repository",
+          "startPos": 25,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "/repo@ghchatbot microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 16,
+          "endPos": 24
+        },
+        {
+          "entity": "repository",
+          "startPos": 26,
+          "endPos": 31
+        }
+      ]
+    },
+    {
+      "text": "/repository",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repository alefesouza/xamtweet",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 12,
+          "endPos": 21
+        },
+        {
+          "entity": "repository",
+          "startPos": 23,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghchatbot",
+      "intent": "RepositoryInfo",
+      "entities": []
+    },
+    {
+      "text": "/repository@ghchatbot alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 31
+        },
+        {
+          "entity": "repository",
+          "startPos": 33,
+          "endPos": 39
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghchatbot atom/atom",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 25
+        },
+        {
+          "entity": "repository",
+          "startPos": 27,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghchatbot electron/electron",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 29
+        },
+        {
+          "entity": "repository",
+          "startPos": 31,
+          "endPos": 38
+        }
+      ]
+    },
+    {
+      "text": "/repository@ghchatbot microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 22,
+          "endPos": 30
+        },
+        {
+          "entity": "repository",
+          "startPos": 32,
+          "endPos": 37
+        }
+      ]
+    },
+    {
+      "text": "/stars",
+      "intent": "Stars",
+      "entities": []
+    },
+    {
+      "text": "/stars alefesouza xamtweet",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 7,
+          "endPos": 16
+        },
+        {
+          "entity": "repository",
+          "startPos": 18,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "/stars alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 7,
+          "endPos": 16
+        },
+        {
+          "entity": "repository",
+          "startPos": 18,
+          "endPos": 24
+        }
+      ]
+    },
+    {
+      "text": "/stars@ghchatbot",
+      "intent": "Stars",
+      "entities": []
+    },
+    {
+      "text": "/start",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "/trendings",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/trendings@ghchatbot",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/trends",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/trends@ghchatbot",
+      "intent": "Trending",
+      "entities": []
+    },
+    {
+      "text": "/user",
+      "intent": "UserInfo",
+      "entities": []
+    },
+    {
+      "text": "/user alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "/user@ghchatbot",
+      "intent": "UserInfo",
+      "entities": []
+    },
+    {
+      "text": "/user@ghchatbot alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 16,
+          "endPos": 25
+        }
+      ]
+    },
+    {
       "text": "about",
       "intent": "About",
       "entities": []
@@ -148,6 +459,38 @@
           "entity": "repository",
           "startPos": 11,
           "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "atom/atom repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 3
+        },
+        {
+          "entity": "repository",
+          "startPos": 5,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "electron/electron repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 7
+        },
+        {
+          "entity": "repository",
+          "startPos": 9,
+          "endPos": 16
         }
       ]
     },
@@ -384,6 +727,22 @@
       ]
     },
     {
+      "text": "microsoft/vscode repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 8
+        },
+        {
+          "entity": "repository",
+          "startPos": 10,
+          "endPos": 15
+        }
+      ]
+    },
+    {
       "text": "php trendings",
       "intent": "Trending",
       "entities": [
@@ -429,6 +788,54 @@
           "entity": "repository",
           "startPos": 16,
           "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "repo atom/atom",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 8
+        },
+        {
+          "entity": "repository",
+          "startPos": 10,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "repo electron/electron",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 12
+        },
+        {
+          "entity": "repository",
+          "startPos": 14,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "repo microsoft/vscode",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 13
+        },
+        {
+          "entity": "repository",
+          "startPos": 15,
+          "endPos": 20
         }
       ]
     },
@@ -636,6 +1043,11 @@
       ]
     },
     {
+      "text": "start",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
       "text": "tell me about the vuejs/vue repository",
       "intent": "RepositoryInfo",
       "entities": [
@@ -700,6 +1112,17 @@
       "text": "trends",
       "intent": "Trending",
       "entities": []
+    },
+    {
+      "text": "user alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 14
+        }
+      ]
     },
     {
       "text": "what about the facebook/react?",

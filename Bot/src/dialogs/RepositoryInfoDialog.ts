@@ -1,5 +1,8 @@
 import * as builder from 'botbuilder';
+
 import fetch from 'node-fetch';
+
+import getRepository from '../utils/get-repository';
 
 const RepositoryInfo: builder.IDialogWaterfallStep = (session, args, next) => {
   const userEntity = builder.EntityRecognizer.findEntity(
@@ -25,41 +28,36 @@ const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
   session,
   results,
 ) => {
-  const repository = results.response;
+  const repository = await getRepository(session, results);
 
-  session.sendTyping();
-
-  const repoInfo = await fetch(`https://api.github.com/repos/${repository}`);
-  const json = await repoInfo.json();
-
-  if (json.message) {
-    session.endDialog('repository_info_not_found', repository);
-
+  if (repository.message) {
     return;
   }
 
   const buttons = [
-    builder.CardAction.openUrl(session, json.html_url, 'GitHub'),
+    builder.CardAction.openUrl(session, repository.html_url, 'GitHub'),
   ];
 
-  if (json.homepage) {
-    buttons.push(builder.CardAction.openUrl(session, json.homepage, 'Website'));
+  if (repository.homepage) {
+    buttons.push(
+      builder.CardAction.openUrl(session, repository.homepage, 'Website'),
+    );
   }
 
   const card = new builder.ThumbnailCard(session)
-    .title(repository)
-    .subtitle(json.description)
+    .title(repository.full_name)
+    .subtitle(repository.description)
     .text(
       session.gettext(
         'repository_info_response',
-        repository,
-        json.language,
-        json.stargazers_count,
-        json.forks_count,
-        json.subscribers_count,
+        repository.full_name,
+        repository.language,
+        repository.stargazers_count,
+        repository.forks_count,
+        repository.subscribers_count,
       ),
     )
-    .images([builder.CardImage.create(session, json.owner.avatar_url)])
+    .images([builder.CardImage.create(session, repository.owner.avatar_url)])
     .buttons(buttons);
 
   const msg = new builder.Message(session).addAttachment(card);

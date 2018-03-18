@@ -54,7 +54,7 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
     ? language
     : session.gettext('trending_all_languages');
 
-  session.send('trending_consulting', theLanguage, period);
+  session.send('trending_consulting', period, theLanguage);
 
   session.sendTyping();
 
@@ -78,6 +78,7 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
           repository.stars,
           repository.forks,
           repository.recent_stars,
+          period,
         ),
       )
       .images([
