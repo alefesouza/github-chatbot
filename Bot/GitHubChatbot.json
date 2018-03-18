@@ -44,6 +44,65 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "alefesouza profile",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/droidex repository",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/xamtweet repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/xamtweet stars",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
       "text": "good day",
       "intent": "Greeting",
       "entities": []
@@ -176,6 +235,17 @@
       ]
     },
     {
+      "text": "i would like to know about the alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 31,
+          "endPos": 40
+        }
+      ]
+    },
+    {
       "text": "i would like to know about the microsoft/vscode repository",
       "intent": "RepositoryInfo",
       "entities": [
@@ -259,6 +329,38 @@
           "entity": "language",
           "startPos": 0,
           "endPos": 2
+        }
+      ]
+    },
+    {
+      "text": "repo alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 14
+        },
+        {
+          "entity": "repository",
+          "startPos": 16,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "repository alefesouza/xamtweet",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 11,
+          "endPos": 20
+        },
+        {
+          "entity": "repository",
+          "startPos": 22,
+          "endPos": 29
         }
       ]
     },
@@ -403,6 +505,22 @@
           "entity": "user",
           "startPos": 8,
           "endPos": 15
+        }
+      ]
+    },
+    {
+      "text": "stars alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "repository",
+          "startPos": 17,
+          "endPos": 23
         }
       ]
     },

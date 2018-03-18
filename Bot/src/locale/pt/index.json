@@ -1,6 +1,6 @@
 {
   "hello":
-    "Olá! Eu sou um bot para pegar informações do GitHub, caso tenha dificuldades, digite 'ajuda'.",
+    "Olá! Eu sou um bot que recebe informações do GitHub, caso tenha dificuldades, digite 'ajuda'.",
   "sorry":
     "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
 

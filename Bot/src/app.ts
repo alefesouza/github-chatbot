@@ -6,7 +6,6 @@ import * as path from 'path';
 import GreetingDialog from './dialogs/GreetingDialog';
 import RepositoryInfoDialog from './dialogs/RepositoryInfoDialog';
 import StarsDialog from './dialogs/StarsDialog';
-import TimelineDialog from './dialogs/TimelineDialog';
 import TrendingDialog from './dialogs/TrendingDialog';
 import UserInfoDialog from './dialogs/UserInfoDialog';
 
@@ -29,13 +28,15 @@ const bot = new builder.UniversalBot(connector, (session) => {
   session.send('sorry', session.message.text);
 });
 
-const recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
-bot.recognizer(recognizer);
+bot.set('storage', new builder.MemoryBotStorage());
 
 bot.set('localizerSettings', {
   botLocalePath: path.join(__dirname, 'locale'),
   defaultLocale: 'en',
 });
+
+const recognizer = new builder.LuisRecognizer(process.env.LUIS_MODEL_URL);
+bot.recognizer(recognizer);
 
 bot.dialog('Greeting', GreetingDialog).triggerAction({
   matches: 'Greeting',
@@ -78,6 +79,8 @@ bot.on('conversationUpdate', (update: builder.IConversationUpdate) => {
     update.membersAdded.length > 0 &&
     update.membersAdded[0].id !== 'default-bot'
   ) {
-    bot.send(new builder.Message().address(update.address).text('hello'));
+    bot.loadSession(update.address, (err, session) => {
+      session.send('hello');
+    });
   }
 });

@@ -44,6 +44,54 @@
   "regex_features": [],
   "utterances": [
     {
+      "text": "alefesouza/droidex stars",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/xamtweet estrelas",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "alefesouza/xamtweet repo",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 0,
+          "endPos": 9
+        },
+        {
+          "entity": "repository",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
       "text": "boa tarde",
       "intent": "Greeting",
       "entities": []
@@ -112,6 +160,22 @@
       "entities": []
     },
     {
+      "text": "estrelas alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 9,
+          "endPos": 18
+        },
+        {
+          "entity": "repository",
+          "startPos": 20,
+          "endPos": 26
+        }
+      ]
+    },
+    {
       "text": "estrelas de alefesouza/droidex",
       "intent": "Stars",
       "entities": [
@@ -156,6 +220,17 @@
           "entity": "repository",
           "startPos": 51,
           "endPos": 55
+        }
+      ]
+    },
+    {
+      "text": "eu gostaria de saber sobre o perfil alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 36,
+          "endPos": 45
         }
       ]
     },
@@ -395,6 +470,17 @@
       "entities": []
     },
     {
+      "text": "perfil do alefesouza",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 10,
+          "endPos": 19
+        }
+      ]
+    },
+    {
       "text": "quantas estrelas tem o repositório alefesouza/droidex",
       "intent": "Stars",
       "entities": [
@@ -423,6 +509,54 @@
           "entity": "repository",
           "startPos": 43,
           "endPos": 49
+        }
+      ]
+    },
+    {
+      "text": "repo alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 14
+        },
+        {
+          "entity": "repository",
+          "startPos": 16,
+          "endPos": 22
+        }
+      ]
+    },
+    {
+      "text": "repositório alefesouza/droidex",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 12,
+          "endPos": 21
+        },
+        {
+          "entity": "repository",
+          "startPos": 23,
+          "endPos": 29
+        }
+      ]
+    },
+    {
+      "text": "stars alefesouza/droidex",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 15
+        },
+        {
+          "entity": "repository",
+          "startPos": 17,
+          "endPos": 23
         }
       ]
     },

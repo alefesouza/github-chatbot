@@ -84,6 +84,12 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
           repository.recent_stars,
         ),
       )
+      .images([
+        builder.CardImage.create(
+          session,
+          `https://github.com/${repository.owner}.png`,
+        ),
+      ])
       .buttons([
         builder.CardAction.openUrl(
           session,

@@ -20,9 +20,11 @@ const getCrawlerInfo = ($) => {
     const $this = $(this);
 
     const name = getSelector($this, 'h3 a').replace(/ /g, '');
+    const owner = name.split('/')[0];
 
     const repository: Repository = {
       name,
+      owner,
       description: getSelector($this, '.py-1'),
       stars: getNumber($this, 'a[href*=stargazers]'),
       recent_stars: getNumber($this, '.float-sm-right'),

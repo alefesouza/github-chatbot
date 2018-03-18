@@ -1,5 +1,5 @@
 {
-  "name": "github-bot",
+  "name": "github-chatbot",
   "version": "1.0.0",
   "description": "A chatbot to get GitHub informations.",
   "main": "index.js",

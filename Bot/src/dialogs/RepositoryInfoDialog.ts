@@ -43,7 +43,7 @@ const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
   ];
 
   if (json.homepage) {
-    buttons.push(builder.CardAction.openUrl(session, json.homepage, 'Site'));
+    buttons.push(builder.CardAction.openUrl(session, json.homepage, 'Website'));
   }
 
   const card = new builder.ThumbnailCard(session)
@@ -59,9 +59,10 @@ const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
         json.subscribers_count,
       ),
     )
+    .images([builder.CardImage.create(session, json.owner.avatar_url)])
     .buttons(buttons);
 
-  var msg = new builder.Message(session).addAttachment(card);
+  const msg = new builder.Message(session).addAttachment(card);
   session.send(msg);
 
   session.endDialog();
