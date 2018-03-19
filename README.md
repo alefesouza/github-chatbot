@@ -1,6 +1,6 @@
 # GitHub Chatbot
 
-This is a chatbot to get GitHub informations using [botbuilder](https://github.com/Microsoft/BotBuilder) for Node.js written in TypeScript, it uses [LUIS](https://luis.ai) to interprete messages and get intents and entities.
+This is a chatbot to get GitHub informations using [botbuilder](https://github.com/Microsoft/BotBuilder) for Node.js written in TypeScript, it uses [LUIS](https://luis.ai) to interprete messages and get intents and entities and [Custom Vision](https://customvision.ai) to interprete images.
 
 This chatbot can:
 
@@ -11,6 +11,10 @@ This chatbot can:
 I developed it to be my final project on the [Microsoft's Maratona Bots](https://ticapacitacion.com/curso/botspt/) (Bots Marathon), an online course about chatbots development.
 
 You can check it live [in English here](https://alefesouza.github.io/github-chatbot) or [in Portuguese here](https://alefesouza.github.io/github-chatbot/pt.html), you also can add it on Telegram, [in English here](https://t.me/ghchatbot) or [in Portuguese here](https://t.me/ghptchatbot).
+
+You can check the chatbot working on the video below (in Portuguese):
+
+[![GitHub Chatbot Video](http://img.youtube.com/vi/b8_woZEirbE/0.jpg)](http://www.youtube.com/watch?v=b8_woZEirbE "GitHub Chatbot Video")
 
 ## Steps to run it
 
