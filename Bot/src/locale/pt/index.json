@@ -2,7 +2,7 @@
   "hello":
     "Olá! Eu sou um chatbot open source que exibe informações do GitHub, caso tenha dificuldades, digite \"ajuda\".",
   "sorry":
-    "Desculpe, eu não entendi '%s'. Caso tenha dificuldades, digite 'ajuda'.",
+    "Desculpe, eu não entendi \"%s\". Caso tenha dificuldades, digite \"ajuda\".",
   "sorry_attachments": "Desculpe, eu não sei como tratar anexos.",
 
   "my_repository": "Meu repositório",
@@ -21,7 +21,7 @@
     "O repositório %s usa a linguagem %s possui %d estrelas, %d forks e %d watchers.",
   "repository_info_error":
     "Por favor, digite um repositório no formato usuário/repositório:",
-  "repository_info_not_found": "O repositório %s/%s não foi encontrado.",
+  "repository_info_not_found": "O repositório %s não foi encontrado.",
 
   "user_info_response":
     "O usuário %s se chama %s, segue %d usuários, possui %d seguidores e %d repositórios.",

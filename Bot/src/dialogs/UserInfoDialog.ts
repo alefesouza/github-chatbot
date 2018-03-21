@@ -11,9 +11,11 @@ const UserInfo: builder.IDialogWaterfallStep = (session, args, next) => {
     next({
       response: userEntity.entity,
     });
-  } else {
-    builder.Prompts.text(session, session.gettext('user_info_error'));
+
+    return;
   }
+
+  builder.Prompts.text(session, session.gettext('user_info_error'));
 };
 
 const UserInfoResult: builder.IDialogWaterfallStep = async (
@@ -25,8 +27,9 @@ const UserInfoResult: builder.IDialogWaterfallStep = async (
   session.sendTyping();
 
   const userInfo = await fetch(`https://api.github.com/users/${user}`);
+  const json = await userInfo.json();
 
-  if (userInfo.message) {
+  if (json.message) {
     session.endDialog('user_info_not_found', user);
 
     return;
@@ -43,7 +46,7 @@ const UserInfoResult: builder.IDialogWaterfallStep = async (
     company,
     avatar_url,
     html_url,
-  } = await userInfo.json();
+  } = json;
 
   const buttons = [builder.CardAction.openUrl(session, html_url, 'GitHub')];
 
@@ -53,11 +56,11 @@ const UserInfoResult: builder.IDialogWaterfallStep = async (
 
   const card = new builder.ThumbnailCard(session)
     .title(name)
-    .subtitle(bio ? bio : '')
+    .subtitle(bio || '')
     .text(
-      `The user ${login},${company ? ` works at ${company},` : ''}${
+      `The user ${login} ${company ? ` works at ${company},` : ''}${
         location ? ` lives at ${location}, ` : ''
-      } has ${followers} followers and follows ${following} users`,
+      } has ${followers} followers and follows ${following} users.`,
     )
     .images([builder.CardImage.create(session, avatar_url)])
     .buttons(buttons);

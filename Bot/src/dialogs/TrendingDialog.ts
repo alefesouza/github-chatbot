@@ -50,9 +50,7 @@ const TrendingResult: builder.IDialogWaterfallStep = async (
     }
   }
 
-  const theLanguage = language
-    ? language
-    : session.gettext('trending_all_languages');
+  const theLanguage = language || session.gettext('trending_all_languages');
 
   session.send('trending_consulting', period, theLanguage);
 

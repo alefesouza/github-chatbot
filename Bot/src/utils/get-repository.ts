@@ -23,7 +23,7 @@ const getRepository: builder.IDialogWaterfallStep = async (
   const json = await repoInfo.json();
 
   if (json.message) {
-    session.endDialog('repository_info_not_found', repository.full_name);
+    session.endDialog('repository_info_not_found', repository);
   }
 
   return json;

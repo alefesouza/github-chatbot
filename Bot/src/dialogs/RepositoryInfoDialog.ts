@@ -19,9 +19,11 @@ const RepositoryInfo: builder.IDialogWaterfallStep = (session, args, next) => {
     next({
       response: userEntity.entity + '/' + repositoryEntity.entity,
     });
-  } else {
-    builder.Prompts.text(session, session.gettext('repository_info_error'));
+
+    return;
   }
+
+  builder.Prompts.text(session, session.gettext('repository_info_error'));
 };
 
 const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
@@ -30,9 +32,7 @@ const RepositoryInfoResult: builder.IDialogWaterfallStep = async (
 ) => {
   const repository = await getRepository(session, results);
 
-  if (repository.message) {
-    return;
-  }
+  if (repository.message) return;
 
   const buttons = [
     builder.CardAction.openUrl(session, repository.html_url, 'GitHub'),

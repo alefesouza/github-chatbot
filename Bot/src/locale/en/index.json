@@ -2,7 +2,7 @@
   "hello":
     "Hello! I'm a chatbot who gets GitHub information, type \"help\" if you need some assistance.",
   "sorry":
-    "Sorry, I did not understand '%s'. Type 'help' if you need assistance.",
+    "Sorry, I did not understand \"%s\". Type \"help\" if you need assistance.",
   "sorry_attachments": "Sorry, I don't how to deal with attachments.",
 
   "my_repository": "My Repository",
@@ -21,7 +21,7 @@
     "The repository %s uses the language %s, it has %d stars, %d forks and %d watchers.",
   "repository_info_error":
     "Please provide a repository with the format user/repository:",
-  "repository_info_not_found": "The repository %s/%s doesn't exist.",
+  "repository_info_not_found": "The repository %s doesn't exist.",
 
   "user_info_response":
     "The user %s is named %s, follow %d users, has %d followers and %d repositories.",
