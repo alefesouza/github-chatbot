@@ -367,6 +367,16 @@
       ]
     },
     {
+      "text": "?",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "???",
+      "intent": "Help",
+      "entities": []
+    },
+    {
       "text": "about",
       "intent": "About",
       "entities": []
@@ -610,6 +620,26 @@
       ]
     },
     {
+      "text": "http://alefesouza.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "http://github.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "http://google.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "https://google.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
       "text": "i did't get it",
       "intent": "Help",
       "entities": []
@@ -840,6 +870,22 @@
       ]
     },
     {
+      "text": "repo nodejs/node",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "repository",
+          "startPos": 12,
+          "endPos": 15
+        }
+      ]
+    },
+    {
       "text": "repository alefesouza/xamtweet",
       "intent": "RepositoryInfo",
       "entities": [
@@ -1043,6 +1089,22 @@
       ]
     },
     {
+      "text": "stars torvalds/linux",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "repository",
+          "startPos": 15,
+          "endPos": 19
+        }
+      ]
+    },
+    {
       "text": "start",
       "intent": "Greeting",
       "entities": []
@@ -1121,6 +1183,61 @@
           "entity": "user",
           "startPos": 5,
           "endPos": 14
+        }
+      ]
+    },
+    {
+      "text": "user d",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "user f",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "user gh",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 6
+        }
+      ]
+    },
+    {
+      "text": "user i",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "user pokemaobr",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 13
         }
       ]
     },

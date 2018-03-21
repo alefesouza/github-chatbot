@@ -372,6 +372,16 @@
       ]
     },
     {
+      "text": "?",
+      "intent": "Help",
+      "entities": []
+    },
+    {
+      "text": "???",
+      "intent": "Help",
+      "entities": []
+    },
+    {
       "text": "about",
       "intent": "About",
       "entities": []
@@ -710,6 +720,26 @@
       "entities": []
     },
     {
+      "text": "http://alefesouza.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "http://github.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "http://google.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "https://google.com",
+      "intent": "None",
+      "entities": []
+    },
+    {
       "text": "me fale como falar com você",
       "intent": "Help",
       "entities": []
@@ -1033,6 +1063,38 @@
       ]
     },
     {
+      "text": "repo alefesouza/gdg-sp",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 14
+        },
+        {
+          "entity": "repository",
+          "startPos": 16,
+          "endPos": 21
+        }
+      ]
+    },
+    {
+      "text": "repo alefesouza/laravel-vue-boilerplate",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 14
+        },
+        {
+          "entity": "repository",
+          "startPos": 16,
+          "endPos": 38
+        }
+      ]
+    },
+    {
       "text": "repo atom/atom",
       "intent": "RepositoryInfo",
       "entities": [
@@ -1045,6 +1107,22 @@
           "entity": "repository",
           "startPos": 10,
           "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "repo d/hamster-applet",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        },
+        {
+          "entity": "repository",
+          "startPos": 7,
+          "endPos": 20
         }
       ]
     },
@@ -1077,6 +1155,22 @@
           "entity": "repository",
           "startPos": 15,
           "endPos": 20
+        }
+      ]
+    },
+    {
+      "text": "repo nodejs/node",
+      "intent": "RepositoryInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 10
+        },
+        {
+          "entity": "repository",
+          "startPos": 12,
+          "endPos": 15
         }
       ]
     },
@@ -1130,6 +1224,22 @@
           "entity": "repository",
           "startPos": 20,
           "endPos": 26
+        }
+      ]
+    },
+    {
+      "text": "stars torvalds/linux",
+      "intent": "Stars",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 6,
+          "endPos": 13
+        },
+        {
+          "entity": "repository",
+          "startPos": 15,
+          "endPos": 19
         }
       ]
     },
@@ -1280,6 +1390,61 @@
       ]
     },
     {
+      "text": "user d",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "user f",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "user l",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 5
+        }
+      ]
+    },
+    {
+      "text": "user maujor",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "user pokemaobr",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 5,
+          "endPos": 13
+        }
+      ]
+    },
+    {
       "text": "usuário alefesouza",
       "intent": "UserInfo",
       "entities": [
@@ -1287,6 +1452,61 @@
           "entity": "user",
           "startPos": 8,
           "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "usuário cyz",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 10
+        }
+      ]
+    },
+    {
+      "text": "usuário f",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "usuário k",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "usuário maujor",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 13
+        }
+      ]
+    },
+    {
+      "text": "usuário pokemaobr",
+      "intent": "UserInfo",
+      "entities": [
+        {
+          "entity": "user",
+          "startPos": 8,
+          "endPos": 16
         }
       ]
     },
